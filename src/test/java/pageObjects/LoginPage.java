@@ -6,7 +6,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.ElementActions;
-
 public class LoginPage  {
     public WebDriver driver;
     public LoginPage(WebDriver driver)

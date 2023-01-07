@@ -1,9 +1,11 @@
 package testCases;
 
 import Envpage.BaseEnv;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 
+@Listeners(listeners.ListenerTest.class)
 public class TestLogin extends BaseEnv {
 
     @Test

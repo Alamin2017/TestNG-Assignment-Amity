@@ -28,7 +28,7 @@ public class ElementActions {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         return driver.findElements(locator);
     }
-    public void click_Element(By locator) throws InterruptedException {
+    public  void click_Element(By locator) throws InterruptedException {
         getElement(locator).click();
         Thread.sleep(2000);
     }

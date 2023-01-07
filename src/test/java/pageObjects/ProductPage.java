@@ -12,6 +12,7 @@ public class ProductPage extends ElementActions {
         this.driver=driver;
     }
     By product1=By.xpath("//img[@alt='Hummingbird printed t-shirt']");
+
     public void product_one_click() throws InterruptedException {
         click_Element(product1);
     }
