@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
 import java.time.Duration;
 public class BaseEnv {
-    public WebDriver driver;
-    public String browser="chrome";
+    public static WebDriver driver;
+    public static String browser="chrome";
     @BeforeMethod
     public void setup()
     {
