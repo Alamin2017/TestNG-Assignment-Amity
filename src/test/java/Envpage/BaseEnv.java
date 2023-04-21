@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
 import java.time.Duration;
 public class BaseEnv {
-    public static WebDriver driver;
-    public static String browser="chrome";
+    public WebDriver driver;
+    public String browser="chrome";
     @BeforeMethod
     public void setup()
     {
@@ -20,8 +20,9 @@ public class BaseEnv {
             case "chrome":
                 ChromeOptions ops = new ChromeOptions();
                 ops.addArguments("--disable-notifications");
+                ops.addArguments("--remote-allow-origins=*");
                 WebDriverManager.chromedriver().setup();
-                driver=new ChromeDriver();
+                driver=new ChromeDriver(ops);
                 break;
             case "Edge":
                 WebDriverManager.edgedriver().setup();

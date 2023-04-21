@@ -31,7 +31,6 @@ public class LoginPage  {
         txtEmail.clear();;
         txtEmail.sendKeys(uname);
         Thread.sleep(3000);
-
     }
     public void setPassword(String pwd) throws InterruptedException {
         txtPassword.clear();

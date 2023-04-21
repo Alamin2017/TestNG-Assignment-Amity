@@ -1,17 +1,14 @@
 package utils;
-import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
+
 import java.util.List;
-public class ElementActions {
-    public WebDriver driver;
+public class ElementActions  {
+    public  WebDriver driver;
     public ElementActions(WebDriver driver)
     {
         this.driver=driver;
@@ -28,7 +25,7 @@ public class ElementActions {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         return driver.findElements(locator);
     }
-    public  void click_Element(By locator) throws InterruptedException {
+    public void click_Element(By locator) throws InterruptedException {
         getElement(locator).click();
         Thread.sleep(2000);
     }
@@ -44,7 +41,5 @@ public class ElementActions {
         Thread.sleep(2000);
         getElement(locator).sendKeys(value);
     }
-
-
 
 }

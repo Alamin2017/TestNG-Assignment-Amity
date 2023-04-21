@@ -9,6 +9,7 @@ public class ProductPage extends ElementActions {
     public ProductPage(WebDriver driver)
     {
         super(driver);
+        //super(driver);
         this.driver=driver;
     }
     By product1=By.xpath("//img[@alt='Hummingbird printed t-shirt']");
