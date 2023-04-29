@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+
+
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
@@ -18,19 +20,16 @@ public class BaseEnv {
         switch (browser)
         {
             case "chrome":
-                ChromeOptions ops = new ChromeOptions();
-                ops.addArguments("--disable-notifications");
-                ops.addArguments("--remote-allow-origins=*");
                 WebDriverManager.chromedriver().setup();
-                driver=new ChromeDriver(ops);
+                driver=new ChromeDriver();
                 break;
-            case "Edge":
+            case "edge":
                 WebDriverManager.edgedriver().setup();
                 driver=new EdgeDriver();
                 break;
-            case "ie":
-                WebDriverManager.iedriver().setup();
-                driver=new InternetExplorerDriver();
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver=new FirefoxDriver();
                 break;
         }
         driver.manage().window().maximize();
